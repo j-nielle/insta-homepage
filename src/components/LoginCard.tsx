@@ -12,8 +12,8 @@ import { ErrorContextWrapper } from "@/utils/contexts/";
 
 export default function LoginCard() {
   return (
-    <div className="w-fit md:w-[350px] z-50">
-      <div className="bg-white dark:bg-black p-[41px] min-h-[409px] max-h-[458px] min-[875px]:dark:ring-neutral-700 min-[875px]:ring-neutral-200 min-[875px]:ring-1 rounded-sm">
+    <div className="w-fit min-[450px]:w-[350px] z-50">
+      <div className="bg-white dark:bg-black p-[41px] min-h-[409px] max-h-[458px] min-[450px]:dark:ring-neutral-700 min-[450px]:ring-neutral-200 min-[450px]:ring-1 rounded-sm">
         <div className="inline-flex flex-row w-full justify-center mb-[35px]">
           <InstaLogo />
         </div>
