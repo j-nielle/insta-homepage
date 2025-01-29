@@ -22,7 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${openSans.variable} antialiased bg-white dark:bg-black`}>
+        className={`${openSans.variable} antialiased bg-white dark:bg-black`}
+      >
         <Providers>
           <main className="flex flex-col justify-center">
             {children}

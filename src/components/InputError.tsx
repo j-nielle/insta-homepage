@@ -5,5 +5,7 @@ interface InputErrorProps {
 }
 
 export default function InputError({ error }: InputErrorProps) {
-  return <p className="text-sm font-base text-[#ed4956] text-center mt-3">{error}</p>;
+  return (
+    <p className="text-sm font-base text-[#ed4956] text-center mt-3">{error}</p>
+  );
 }

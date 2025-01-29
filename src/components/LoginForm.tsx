@@ -55,7 +55,8 @@ export default function LoginForm() {
       <button
         disabled={!username || !password || password.length < 6}
         type="submit"
-        className="w-full h-8 rounded-lg bg-blue-500 py-1 disabled:opacity-80 text-sm font-medium text-white enabled:hover:bg-blue-600">
+        className="w-full h-8 rounded-lg bg-blue-500 py-1 disabled:opacity-80 text-sm font-medium text-white enabled:hover:bg-blue-600"
+      >
         Log In
       </button>
     </form>
