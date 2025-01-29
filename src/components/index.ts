@@ -6,7 +6,6 @@ export { default as AppDownload } from "./AppDownload";
 export { default as SignUpPrompt } from "./SignUpPrompt";
 export { default as InstaLogo } from "./InstaLogo";
 export { default as LoginCard } from "./LoginCard";
-export { default as Input } from "./Input";
 export { default as FacebookLoginPrompt } from "./FacebookLoginPrompt";
 export { default as ForgotPasswordPrompt } from "./ForgotPasswordPrompt";
 export { default as AuthOptionsPrompt } from "./AuthOptionsPrompt";
