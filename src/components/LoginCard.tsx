@@ -8,7 +8,7 @@ import {
   SignUpPrompt,
   AuthOptionsPrompt,
 } from "@/components";
-import { ErrorContextWrapper } from "@/utils/contexts/";
+import ErrorContextWrapper from "@/utils/contexts/ErrorContextWrapper";
 
 export default function LoginCard() {
   return (

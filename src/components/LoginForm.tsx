@@ -5,7 +5,7 @@ import { ErrorContext as Error } from "@/utils/contexts";
 import { Input } from "@/components";
 
 export default function LoginForm() {
-  const { setErrors } = useContext(Error);
+  const { errors, setErrors } = useContext(Error);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -40,13 +40,23 @@ export default function LoginForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-2">
         <Input
-          inputFor="username"
+          inputClass={
+            errors.username
+              ? "border-red-500"
+              : "dark:ring-neutral-700 ring-neutral-200"
+          }
+          inputFor="usernameF"
           label="Phone number, username, or email"
           type="text"
           onChange={handleUsernameChange}
         />
         <Input
-          inputFor="password"
+          inputClass={
+            errors.password
+              ? "border-red-500"
+              : "dark:ring-neutral-700 ring-neutral-200"
+          }
+          inputFor="passwordF"
           label="Password"
           type="password"
           onChange={handlePasswordChange}
@@ -55,8 +65,7 @@ export default function LoginForm() {
       <button
         disabled={!username || !password || password.length < 6}
         type="submit"
-        className="w-full h-8 rounded-lg bg-blue-500 py-1 disabled:opacity-80 text-sm font-medium text-white enabled:hover:bg-blue-600"
-      >
+        className="w-full h-8 rounded-lg bg-blue-500 py-1 disabled:opacity-80 text-sm font-medium text-white enabled:hover:bg-blue-600">
         Log In
       </button>
     </form>
