@@ -1,16 +1,11 @@
-"use client";
+import { useMounted } from "@/utils/useMounted";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 
 export default function ThemeSwitcher() {
-  const [mounted, setMounted] = useState(false);
+  const isMounted = useMounted();
   const { resolvedTheme, setTheme } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  return mounted ? (
+  return isMounted ? (
     <div className="relative z-[10000000000] top-0 right-0">
       <button
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}

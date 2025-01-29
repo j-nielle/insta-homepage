@@ -1,22 +1,17 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import instaLogoDark from "@/assets/Instagram_logo-1.png";
 import instaLogo from "@/assets/Instagram_logo.png";
+import { useMounted } from "@/utils/useMounted";
 
 export default function InstaLogo() {
-  const [mounted, setMounted] = useState(false);
+  const isMounted = useMounted();
   const { resolvedTheme } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-	
   return (
     <>
-      {mounted ? (
+      {isMounted ? (
         resolvedTheme === "dark" ? (
           <Image
             alt="instagram logo"
