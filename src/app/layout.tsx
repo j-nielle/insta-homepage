@@ -11,7 +11,7 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: "Instagram",
-  description: "Technical Test",
+  description: "Junior Frontend Developer Test",
 };
 
 export default function RootLayout({
