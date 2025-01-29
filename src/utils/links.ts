@@ -14,7 +14,7 @@ export const footerLinks = [
 	{ title: "Instagram Lite", href: "https://www.instagram.com/web/lite/" },
 	{ title: "Threads", href: "https://www.threads.net/" },
 	{
-		title: "Contact uploading and non-users",
+		title: "Contact Uploading and Non-Users",
 		href: "https://www.facebook.com/help/instagram/261704639352628",
 	},
 	{

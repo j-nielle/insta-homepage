@@ -7,8 +7,8 @@ import { AppDownload, InstaLogo, LoginForm, SignUpPrompt } from "@/components";
 
 export default function LoginSection() {
   return (
-    <div className="w-fit md:w-[350px] h-[586px] z-50">
-      <div className="bg-white dark:bg-black p-[41px] min-[875px]:dark:ring-neutral-700 min-[875px]:ring-neutral-200 min-[875px]:ring-1 rounded-sm">
+    <div className="w-fit md:w-[350px] z-50">
+      <div className="bg-white dark:bg-black p-[41px] h-[409px] min-[875px]:dark:ring-neutral-700 min-[875px]:ring-neutral-200 min-[875px]:ring-1 rounded-sm">
         <div className="inline-flex flex-row w-full justify-center mb-[35px]">
           <InstaLogo />
         </div>
