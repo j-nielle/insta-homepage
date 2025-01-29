@@ -1,11 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { ErrorContext as Error } from "@/utils/contexts";
+import { Input } from "@/components";
 
 export default function LoginForm() {
+  const { setErrors } = useContext(Error);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState({ username: "", password: "" });
 
   const validateForm = () => {
     const newErrors = { username: "", password: "" };
@@ -18,48 +20,40 @@ export default function LoginForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
+      setErrors({
+        username: "",
+        password:
+          "Sorry, your password was incorrect. Please double-check your password.",
+      });
     }
+  };
+
+  const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.target.value);
+  };
+
+  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div>
-        <div>
-          <input
-            type="text"
-            placeholder="Phone number, username, or email"
-            className={`w-full rounded ring-1 p-2 text-neutral-700 dark:bg-[#121212] dark:text-white h-[37.6px] focus:outline-none text-xs leading-[18px] ${
-              errors.username
-                ? "border-red-500"
-                : "dark:ring-neutral-700 ring-neutral-200"
-            }`}
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          {errors.username && (
-            <p className="text-xs text-red-500">{errors.username}</p>
-          )}
-        </div>
-        <div>
-          <input
-            type="password"
-            placeholder="Password"
-            min={6}
-            className={`w-full mt-[7px] rounded ring-1 p-2 text-neutral-700 dark:bg-[#121212] dark:text-white h-[37.6px] focus:outline-none text-xs leading-[18px] ${
-              errors.password
-                ? "border-red-500"
-                : "dark:ring-neutral-700 ring-neutral-200"
-            }`}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          {errors.password && (
-            <p className="text-xs text-red-500">{errors.password}</p>
-          )}
-        </div>
+      <div className="space-y-2">
+        <Input
+          inputFor="username"
+          label="Phone number, username, or email"
+          type="text"
+          onChange={handleUsernameChange}
+        />
+        <Input
+          inputFor="password"
+          label="Password"
+          type="password"
+          onChange={handlePasswordChange}
+        />
       </div>
       <button
-        disabled={!username || !password}
+        disabled={!username || !password || password.length < 6}
         type="submit"
         className="w-full h-8 rounded-lg bg-blue-500 py-1 disabled:opacity-80 text-sm font-medium text-white enabled:hover:bg-blue-600">
         Log In
