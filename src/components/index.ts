@@ -6,3 +6,4 @@ export { default as AppDownload } from './AppDownload';
 export { default as SignUpPrompt } from './SignUpPrompt';
 export { default as InstaLogo } from './InstaLogo';
 export { default as LoginSection } from './LoginSection';
+export { default as Input } from './Input';
