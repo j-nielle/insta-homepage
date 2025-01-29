@@ -11,11 +11,11 @@ export default function ThemeSwitcher() {
   }, []);
 
   return mounted ? (
-    <div className="fixed right-5 z-[10000000000] max-lg:bottom-2.5 lg:top-1/3">
+    <div className="relative z-[10000000000] top-0 right-0">
       <button
         onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
         type="button"
-        className="flex h-10 w-10 p-2 items-center justify-center rounded-md border border-gray-800 text-gray-800 focus:outline-none focus:ring-0 focus:ring-gray-200 dark:border-slate-300 dark:text-white">
+        className="flex h-10 w-10 p-2 items-center justify-center text-gray-800 focus:outline-none focus:ring-0 dark:text-white">
         <svg
           className="dark:hidden"
           fill="currentColor"
