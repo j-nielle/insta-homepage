@@ -1,4 +1,4 @@
-import { useMounted } from "@/utils/useMounted";
+import { useMounted } from "@/utils/hooks/useMounted";
 import { useTheme } from "next-themes";
 
 export default function ThemeSwitcher() {
