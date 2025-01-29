@@ -1,24 +1,9 @@
 "use client";
 
+import { footerLinks } from "@/utils/links";
 import React, { useEffect, useState } from "react";
 
 export default function Footer() {
-  const links = [
-    "Meta",
-    "About",
-    "Blog",
-    "Jobs",
-    "Help",
-    "API",
-    "Privacy",
-    "Terms",
-    "Locations",
-    "Instagram Lite",
-    "Threads",
-    "Contact uploading and non-users",
-    "Meta Verified",
-  ];
-
   const [year, setYear] = useState<number>();
 
   useEffect(() => {
@@ -30,12 +15,12 @@ export default function Footer() {
       <div className="h-[83px] m-0 mb-[52px] flex items-stretch justify-start box-border">
         <div className="mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
-            {links.map((link) => (
+            {footerLinks.map((link, index) => (
               <a
-                key={link}
-                href="#"
+                key={index}
+                href={link.href}
                 className="text-xs text-gray-500 hover:text-gray-600">
-                {link}
+                {link.title}
               </a>
             ))}
           </div>
