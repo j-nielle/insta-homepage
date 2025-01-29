@@ -29,7 +29,8 @@ export default function MobileMockup() {
               key={index}
               className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
                 currentIndex === index ? "opacity-100" : "opacity-0"
-              }`}>
+              }`}
+            >
               <Image
                 src={image.src}
                 alt={`Mockup ${index + 1}`}

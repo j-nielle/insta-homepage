@@ -6,7 +6,8 @@ export default function SignUpPrompt() {
       Don&apos;t have an account?{" "}
       <a
         href="https://www.instagram.com/accounts/emailsignup/"
-        className="font-semibold text-blue-500">
+        className="font-semibold text-blue-500"
+      >
         Sign up
       </a>
     </div>

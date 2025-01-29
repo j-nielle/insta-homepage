@@ -9,8 +9,8 @@ export function useMounted() {
     setIsMounted(true);
 
     return () => {
-			setIsMounted(false);
-		}
+      setIsMounted(false);
+    };
   }, []);
 
   return isMounted;
