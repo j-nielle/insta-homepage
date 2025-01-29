@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { cn } from "@/utils/cn";
@@ -28,10 +29,10 @@ export default function Input({
         min={type === "password" ? 6 : 0}
         type={type}
         placeholder=" "
-        className={cn(DEFAULT_INPUT_CLASS, inputClass)}
+        className={inputClass}
         onChange={onChange}
       />
-      <label htmlFor={inputFor} className={cn(DEFAULT_LABEL_CLASS, labelClass)}>
+      <label htmlFor={inputFor} className={labelClass}>
         {label}
       </label>
     </div>
