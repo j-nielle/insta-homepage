@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ThemeProvider from "@/utils/ThemeProvider";
+import ThemeProvider from "@/utils/provider/ThemeProvider";
 import dynamic from "next/dynamic";
 
 const ThemeSwitcher = dynamic(() => import("./ThemeSwitcher"), { ssr: false });
