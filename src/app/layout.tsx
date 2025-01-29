@@ -24,8 +24,10 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} antialiased bg-white dark:bg-black`}>
         <Providers>
-          <main className="flex justify-center">{children}</main>
-          <Footer />
+          <main className="flex flex-col justify-center">
+            {children}
+            <Footer />
+          </main>
         </Providers>
       </body>
     </html>
