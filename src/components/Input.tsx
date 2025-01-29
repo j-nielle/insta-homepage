@@ -10,6 +10,7 @@ interface InputProps {
   labelClass?: string;
   inputClass?: string;
   inputFor: string;
+	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default function Input({
@@ -18,6 +19,7 @@ export default function Input({
   labelClass,
   inputClass,
   inputFor,
+	onChange
 }: InputProps) {
   return (
     <div className="relative">
@@ -27,6 +29,7 @@ export default function Input({
         type={type}
         placeholder=" "
         className={cn(DEFAULT_INPUT_CLASS, inputClass)}
+				onChange={onChange}
       />
       <label htmlFor={inputFor} className={cn(DEFAULT_LABEL_CLASS, labelClass)}>
         {label}

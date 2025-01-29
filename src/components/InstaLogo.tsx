@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import instaLogoDark from "@/assets/Instagram_logo-1.png";
 import instaLogo from "@/assets/Instagram_logo.png";
-import { useMounted } from "@/utils/useMounted";
+import { useMounted } from "@/utils/hooks/useMounted";
 
 export default function InstaLogo() {
   const isMounted = useMounted();
