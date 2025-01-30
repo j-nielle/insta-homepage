@@ -24,7 +24,7 @@ export default function MobileMockup() {
   return (
     <div className="hidden min-[875px]:block w-96">
       <div className="relative -left-[52px] -top-2 h-[581px] w-[422px] bg-[url('https://www.instagram.com/static/images/homepage/phones/home-phones.png/1dc085cdb87d.png')] bg-auto bg-no-repeat">
-        <div className="absolute left-[149px] top-[9px] overflow-hidden w-[264px] h-[569px]">
+        <div className="absolute left-[149px] top-[11px] overflow-hidden w-[264px] h-[569px]">
           {images.map((image, index) => (
             <div
               key={index}
