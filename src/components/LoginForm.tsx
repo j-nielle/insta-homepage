@@ -42,7 +42,7 @@ export default function LoginForm() {
           <input
             id="username"
             type="text"
-            placeholder=" "
+            placeholder="&nbsp;"
             className={`w-full px-2 text-xs leading-[18px] rounded ring-1 ring-neutral-300 dark:ring-neutral-700 text-neutral-700 dark:bg-[#121212] dark:text-white h-[37.6px] focus:outline-none focus-visible:outline-none peer transition-all duration-300 [&:not(:placeholder-shown)]:text-[10px] [&:not(:placeholder-shown)]:pt-4 [&:not(:placeholder-shown)]:pb-1 ${
               errors.username
                 ? "border-red-500"
@@ -60,7 +60,7 @@ export default function LoginForm() {
           <input
             id="password"
             type="password"
-            placeholder=" "
+            placeholder="&nbsp;"
             className={`w-full px-2 text-xs leading-[18px] rounded ring-1 ring-neutral-300 dark:ring-neutral-700 text-neutral-700 dark:bg-[#121212] dark:text-white h-[37.6px] focus:outline-none focus-visible:outline-none peer transition-all duration-300 [&:not(:placeholder-shown)]:text-[10px] [&:not(:placeholder-shown)]:pt-4 [&:not(:placeholder-shown)]:pb-1 ${
               errors.password
                 ? "border-red-500"
