@@ -1,4 +1,4 @@
-## Instagram Homepage - Replica
+## Instagram Homepage - Clone
 
 First, I went to check the original layout by going to https://www.instagram.com/.
 
