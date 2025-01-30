@@ -14,6 +14,7 @@ export default function LoginForm() {
     const newErrors = { username: "", password: "" };
     if (!username) newErrors.username = "Username is required";
     if (!password) newErrors.password = "Password is required";
+    if(password && password.length < 6) newErrors.password = "Password must be at least 6 characters";
     setErrors(newErrors);
     return !Object.values(newErrors).some(Boolean);
   };
@@ -54,6 +55,7 @@ export default function LoginForm() {
                 : "dark:ring-[#525252] ring-neutral-200"
             }`}
             onChange={handleUsernameChange}
+            onBlur={validateForm}
           />
           <label
             htmlFor="username"
@@ -73,6 +75,7 @@ export default function LoginForm() {
                 : "dark:ring-[#525252] ring-neutral-200"
             }`}
             onChange={handlePasswordChange}
+            onBlur={validateForm}
           />
           <label
             htmlFor="password"
