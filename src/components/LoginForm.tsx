@@ -46,6 +46,7 @@ export default function LoginForm() {
           <input
             id="username"
             type="text"
+            required
             placeholder="&nbsp;"
             className={`w-[268px] h-[38px] px-2 text-xs leading-[18px] rounded ring-1 ring-neutral-300 dark:ring-[#525252] text-neutral-700 dark:bg-[#121212] dark:text-white focus:outline-none focus-visible:outline-none peer transition-all duration-300 [&:not(:placeholder-shown)]:text-[11px] [&:not(:placeholder-shown)]:pt-4 [&:not(:placeholder-shown)]:pb-1 ${
               errors.username
@@ -64,6 +65,7 @@ export default function LoginForm() {
           <input
             id="password"
             type={togglePassword ? "text" : "password"}
+            required
             placeholder="&nbsp;"
             className={`w-[268px] h-[38px] px-2 text-xs leading-[18px] rounded ring-1 ring-neutral-300 dark:ring-[#525252] text-neutral-700 dark:bg-[#121212] dark:text-white focus:outline-none focus-visible:outline-none peer transition-all duration-300 [&:not(:placeholder-shown)]:text-[11px] [&:not(:placeholder-shown)]:pt-4 [&:not(:placeholder-shown)]:pb-1 ${
               errors.password
@@ -81,7 +83,7 @@ export default function LoginForm() {
             <button
               onClick={() => setTogglePassword((prev) => !prev)}
               type="button"
-              className="absolute right-[10px] text-sm font-semibold top-1/2 -translate-y-1/2 bg-none border-0 cursor-pointer">
+              className="absolute right-[10px] text-black dark:text-white text-sm font-semibold top-1/2 -translate-y-1/2 bg-none border-0 cursor-pointer">
               {togglePassword ? "Hide" : "Show"}
             </button>
           )}
