@@ -5,6 +5,7 @@ import instaLogoDark from "@/assets/Instagram_logo-1.png";
 import instaLogo from "@/assets/Instagram_logo.png";
 import { useMounted } from "@/utils/hooks/useMounted";
 
+// this component renders the Instagram logo based on the theme
 export default function InstaLogo() {
   const isMounted = useMounted();
   const { resolvedTheme } = useTheme();

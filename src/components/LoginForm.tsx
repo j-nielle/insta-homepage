@@ -8,6 +8,7 @@ export default function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  // this function validates the form and sets the errors
   const validateForm = () => {
     const newErrors = { username: "", password: "" };
     if (!username) newErrors.username = "Username is required";
@@ -16,6 +17,7 @@ export default function LoginForm() {
     return !Object.values(newErrors).some(Boolean);
   };
 
+  // this function handles the form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
@@ -39,6 +41,7 @@ export default function LoginForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-2">
         <div className="relative">
+          {/* this &nbsp; is used to ensure the input field is not empty, which helps with styling and label positioning */}
           <input
             id="username"
             type="text"

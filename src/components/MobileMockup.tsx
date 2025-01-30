@@ -12,6 +12,7 @@ export default function MobileMockup() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // this useEffect hook changes the image every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);

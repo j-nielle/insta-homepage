@@ -11,6 +11,7 @@ import {
 export default function AuthOptionsPrompt() {
   const { errors } = useContext(ErrorContext);
 
+  // render error message if there is one
   const renderError = () => {
     if (errors.username || errors.password) {
       return <InputError error={errors.username || errors.password} />;

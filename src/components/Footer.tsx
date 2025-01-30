@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 export default function Footer() {
   const [year, setYear] = useState<number>();
 
+  // set the current year when the component mounts
   useEffect(() => {
     setYear(new Date().getFullYear());
   }, []);
