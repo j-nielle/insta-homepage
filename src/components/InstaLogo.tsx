@@ -17,19 +17,19 @@ export default function InstaLogo() {
           <Image
             alt="instagram logo"
             src={instaLogoDark.src}
-            width={180}
-            height={50}
+            width={175}
+            height={51}
           />
         ) : (
           <Image
             alt="instagram logo"
             src={instaLogo.src}
-            width={180}
-            height={50}
+            width={175}
+            height={51}
           />
         )
       ) : (
-        <div style={{ width: 180, height: 50 }} />
+        <div style={{ width: 175, height: 51 }} />
       )}
     </>
   );
