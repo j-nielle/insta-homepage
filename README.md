@@ -22,7 +22,7 @@ I also observed the input behavior of the original like how it continues to disa
 
 I've never really implemented a floating label input from scratch so I had to search it up on google and found multiple examples like [this](https://codepen.io/avstorm/pen/gKGbxo) and [this](https://crinkles.dev/writing/combining-placeholder-shown-and-has-selectors/). I also used [Tailwind Play](https://play.tailwindcss.com/) to experiment before applying it on the project.
 
-As for the form validation, I noticed the Instagram doesn't really show error messages when any of the input fields are empty since they have their button disabled when that happens. Here's what I did instead:
+As for the displaying of errors, I added this as well:
 
 ![alt text](/public/sample-error.png)
 
