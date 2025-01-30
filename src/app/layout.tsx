@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
@@ -21,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <Analytics/>
       <body
         className={`${openSans.variable} antialiased bg-white dark:bg-black`}
       >
