@@ -31,7 +31,7 @@ export default function Footer() {
               <a
                 key={index}
                 href={link.href}
-                className="text-xs text-[#979797] hover:text-gray-600">
+                className="text-xs text-[#979797] hover:text-gray-600 hover:underline">
                 {link.title}
               </a>
             ))}
