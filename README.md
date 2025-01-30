@@ -10,11 +10,11 @@ To get the responsiveness as close as possible to the original, I observed how i
 
 My implementation:
 
-<video src="/public/responsiveness-implementation.mp4" width="320" height="240" controls></video>
+https://github.com/user-attachments/assets/898b5cec-f00b-444e-a134-958cd3f85651
 
 The original implementation:
 
-<video src="/public/responsiveness-original.mp4" width="320" height="240" controls></video>
+https://github.com/user-attachments/assets/f25a6c91-5883-4fe8-95ac-1821fd5dae59
 
 I also had to use a lot of arbitrary values for the spacing, alignment, and responsiveness since sometimes using the `sm`, `md`, and others weren't going to match the original.
 
